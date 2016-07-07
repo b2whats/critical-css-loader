@@ -1,0 +1,9 @@
+.CSS {
+  z-index: 10;
+}
+
+@media screen and (max-width:480px) {
+  .CSS {
+    font-size: 12px;
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "name": "critical-css-loader",
+  "version": "0.0.1",
+  "description": "Webpack-loader for receive critical css styles from html",
+  "author": "Akimov Vladimir <b2whats@aol.com>",
+  "repository": "b2whats/critical-css-loader",
+  "keywords": [
+    "critical-css",
+    "critical css",
+    "server-side-render",
+    "server side render",
+    "webpack",
+    "webpack-loader",
+    "webpack loader",
+    "loader",
+    "css",
+    "scss",
+    "style",
+    "styles",
+    "style-loader",
+    "style loader",
+    "isomorphic",
+    "universal"
+  ],
+  "main": "lib/loader.js",
+  "scripts": {
+    "start": "NODE_ENV=development webpack --config example/webpack/webpack.config.js",
+    "watch": "NODE_ENV=development webpack --config example/webpack/webpack.config.js  --watch",
+    "dev": "NODE_ENV=server BABEL_DISABLE_CACHE=1 babel-node --presets es2015 example/index.js",
+    "test": "ava -v",
+    "test:watch": "ava -v --watch",
+    "build": "rm -rf ./lib && babel src --out-dir lib"
+  },
+  "peerDependencies": {
+    "node": "^6.2.0"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "babel": "^6.5.2",
+    "babel-cli": "^6.10.1",
+    "babel-core": "^6.10.4",
+    "babel-loader": "^6.2.4",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-stage-0": "^6.5.0",
+    "css-loader": "^0.23.1",
+    "loader-utils": "^0.2.15",
+    "postcss": "^5.0.21",
+    "style-loader": "^0.13.1",
+    "webpack": "^2.1.0-beta.13"
+  },
+  "devDependencies": {
+    "ava": "^0.15.2"
+  },
+  "ava": {
+    "require": "babel-register",
+    "babel": {
+      "babelrc": true
+    }
+  }
+}
